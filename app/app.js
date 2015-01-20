@@ -8,16 +8,19 @@ angular.module("app", [
                 template: '<h1>login</h1>'
             })
             .state('main', {
-                template: '<h1>main</h1>main header<div ui-view=navigation></div><div ui-view=content></div>main footer'
+                template: '<h1>main</h1><div ui-view=header></div><div ui-view=body></div><div ui-view=footer></div>'
             })
             .state('main.homepage', {
                 url: '/',
                 views: {
-                    'navigation': {
-                        template: '<h1>navigation</h1>'
+                    'header': {
+                        template: '<h2>header</h2>'
                     },
-                    'content': {
-                        template: '<h1>content</h1>'
+                    'body': {
+                        template: '<h2>body</h2>'
+                    },
+                    'footer': {
+                        template: '<h2>footer</h2>'
                     }
                 }
             })
